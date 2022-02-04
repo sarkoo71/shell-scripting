@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This is just a sample comment
+#This is just a sample comment nothing
 
 ls
 
