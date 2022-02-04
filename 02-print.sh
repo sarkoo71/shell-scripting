@@ -20,4 +20,4 @@ echo Hello World
 # Cyan          36
 
 
-echo -e "\e31mRED\e[0m"
+echo -e "\e[31mRED\e[0m"
