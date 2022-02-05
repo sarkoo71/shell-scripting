@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Roboshop project structure initiation">
-      <change afterPath="$PROJECT_DIR$/06-if.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/common.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Roboshop project structure initiation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644043685243</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Roboshop project structure initiation">
+      <created>1644044334934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644044334934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
