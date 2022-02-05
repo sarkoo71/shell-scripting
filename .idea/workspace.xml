@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Variable topic">
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/cart.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/catalogue.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/dispatch.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/frontend.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/mongodb.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/mysql.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/payment.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/rabbitmq.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/redis.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/shipping.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/components/user.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roboshop-project/roboshop.sh" afterDir="false" />
+    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Roboshop project structure initiation">
+      <change afterPath="$PROJECT_DIR$/06-if.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roboshop-project/components/common.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +55,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644042268875</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Roboshop project structure initiation">
+      <created>1644043619338</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644043619338</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Roboshop project structure initiation">
+      <created>1644043685243</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644043685243</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Variable topic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Variable topic" />
+    <MESSAGE value="Roboshop project structure initiation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Roboshop project structure initiation" />
   </component>
 </project>
