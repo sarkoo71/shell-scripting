@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Variable">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Roboshop project structure initiation">
       <change beforePath="$PROJECT_DIR$/roboshop-project/roboshop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/roboshop-project/roboshop.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,35 @@
       <option name="project" value="LOCAL" />
       <updated>1644044334934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Roboshop project structure initiation">
+      <created>1644106250315</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644106250315</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Roboshop project structure initiation">
+      <created>1644106370071</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644106370071</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Roboshop project structure initiation">
+      <created>1644106433461</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644106433461</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Roboshop project structure initiation">
+      <created>1644106520500</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1644106520500</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
