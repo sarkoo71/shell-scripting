@@ -35,9 +35,10 @@
 ## systemctl restart nginx
 #
 #```
-rm -f /tmp/roboshop.log
-echo "Installing NGINX"
-yum install nginx -y >> /tmp/roboshop.log
+LOG_FILE = /tmp/roboshop.log
+rm -f $LOG_FILE
 
+echo "Installing NGINX"
+yum install nginx -y &>> $LOG_FILE
 echo "Download the Frontend content"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >> /tmp/roboshop.log
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>> $LOG_FILE
