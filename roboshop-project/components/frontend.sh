@@ -39,6 +39,14 @@ LOG_FILE = /tmp/roboshop.log
 rm -f $LOG_FILE
 
 echo "Installing NGINX"
-yum install nginx -y &>> $LOG_FILE
+yum install nginx -y &>>$LOG_FILE
+
 echo "Download the Frontend content"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>> $LOG_FILE
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
+
+echo "Clean Old Content"
+rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
+
+echo "Extracted Frontend Content"
+cd /usr/share/nginx/html/ &>>$LOG_FILE
+unzip /tmp/frontend.zip &>>$LOG_FILE
