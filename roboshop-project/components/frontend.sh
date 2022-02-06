@@ -48,8 +48,10 @@ echo "Clean Old Content"
 rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
 
 echo "Extracted Frontend Content"
+cd /tmp
+unzip frontend.zip &>>$LOG_FILE
 cd /usr/share/nginx/html/ &>>$LOG_FILE
-unzip /tmp/frontend.zip &>>$LOG_FILE
+
 
 echo "Moving forntend content to NGINX path"
 cp /usr/share/nginx/html/frontend-main/static/* /usr/share/nginx/html/ &>>$LOG_FILE
