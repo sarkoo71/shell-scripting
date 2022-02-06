@@ -2,5 +2,5 @@
 
 if [ -f components/$1.sh ]
 then
-  echo ok
+  bash components/$1.sh
 fi
