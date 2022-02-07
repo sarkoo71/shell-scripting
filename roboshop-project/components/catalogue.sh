@@ -76,7 +76,7 @@ echo "changing permission for user and group"
 chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
 
 echo "Updating systemD file"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
+sed -i -e 's/MONGO_DNSNAME/mongod.rshope.internal' /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
 
 echo "Setup Catalogue Systemd File"
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service &>>$LOG_FILE
