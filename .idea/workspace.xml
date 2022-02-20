@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Roboshop project structure initiation">
       <change afterPath="$PROJECT_DIR$/roboshop-project/create-ec2.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="bbb14ceb-a41d-413c-a628-115e8603e554" name="Changes" comment="Roboshop project structure initiation" />
+>>>>>>> 547ad46e0869e3085d7a6e5be01970acab6d77d8
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,12 +38,12 @@
   <component name="RunManager">
     <configuration name="Push" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../git-push-script" />
       <option name="SCRIPT_OPTIONS" value="" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
       <option name="INTERPRETER_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Git/bin/bash.exe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="false" />
@@ -155,7 +159,63 @@
       <option name="project" value="LOCAL" />
       <updated>1644106798508</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Roboshop project structure initiation">
+      <created>1644213689732</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1644213689732</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Roboshop project structure initiation">
+      <created>1644213835913</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1644213835913</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Roboshop project structure initiation">
+      <created>1644213990457</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1644213990457</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Roboshop project structure initiation">
+      <created>1644214178190</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1644214178190</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Roboshop project structure initiation">
+      <created>1644214986268</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1644214986268</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Roboshop project structure initiation">
+      <created>1644215025933</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1644215025933</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Roboshop project structure initiation">
+      <created>1644215431525</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1644215431526</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Roboshop project structure initiation">
+      <created>1644219467312</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1644219467312</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -60,7 +60,7 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 
 echo "Extract Catalogue Code"
 cd /tmp/
-unzip -o catalogue.zip &>>$LOG_FILE &>>$LOG_FILE
+unzip -o catalogue.zip &>>$LOG_FILE
 
 echo "Remove old catalogue"
 rm -rf /home/roboshop/catalogue
@@ -73,4 +73,15 @@ cd /home/roboshop/catalogue
 npm install &>>$LOG_FILE
 
 echo "changing permission for user and group"
-chown roboshop:roboshop /home/roboshop/ -R
+chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
+
+echo "Updating systemD file"
+sed -i -e 's/MONGO_DNSNAME/mongod.rshope.internal/' /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
+
+echo "Setup Catalogue Systemd File"
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service &>>$LOG_FILE
+
+echo "start catalogue"
+systemctl daemon-reload &>>$LOG_FILE
+systemctl enable catalogue &>>$LOG_FILE
+systemctl start catalogue &>>$LOG_FILE
