@@ -1,4 +1,11 @@
 #!/bin/bash
+Instance_Name=$1
+if [ -z "${Instance_Name}" ]; then
+  echo "\e[1:33Instance Name arg needed\e[0m"
+  exit 
+
+fi
+
 
 AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=Centos-7-DevOps-Practice" --query 'Images[*].[ImageId]' --output text)
 
