@@ -1,6 +1,6 @@
 #!/bin/bash
 
-AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=Centos-7-DevOps-Practice")
+AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=Centos-7-DevOps-Practice" --query 'Images[*].[ImageId]' --output text)
 echo $AMI_ID
 #if [ -z "${AMI_ID}" ];then
 #  echo -e "\e[1;31munable to find image AMID\e[0m"
