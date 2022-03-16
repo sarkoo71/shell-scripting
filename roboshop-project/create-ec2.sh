@@ -21,7 +21,7 @@ Private_Ip=$(aws ec2 describe-instances --filters Name=tag:Name,Values=frontend 
 
 if [ -z "${Private_Ip}" ]; then
   SG_ID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=allow-all-ports --query "SecurityGroups[*].GroupId" --output text)
-  if [-z "${SG_ID}"]; then
+  if [ -z "${SG_ID}" ]; then
       echo"security group allow-all-ports is not exist"
       exit
   fi
