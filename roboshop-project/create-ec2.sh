@@ -41,4 +41,4 @@ echo '{
                                     "TTL": 300,
                                  "ResourceRecords": [{ "Value": "IPADDRESS"}]
 }}]
-}' | sed -e "s/DNSNAME/$(Instance_Name)/" -e "s/IPADDRESS/${IPADDRESS}"  >/tmp/record.json
+}' | sed -e "s/DNSNAME/$(Instance_Name)/" -e "s/IPADDRESS/${IPADDRESS/}"  >/tmp/record.json
