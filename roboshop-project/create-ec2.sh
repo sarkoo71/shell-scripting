@@ -28,5 +28,17 @@ if [ -z "${Private_Ip}" ]; then
   aws ec2 run-instances --image-id ${AMI_ID} --instance-type t3.micro --output text --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${Instance_Name}}]" "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=${Instance_Name}}]"  --instance-market-options "MarketType=spot,SpotOptions={InstanceInterruptionBehavior=stop, SpotInstanceType = persistent}" --security-group-ids "${SG_ID}"
 else
   echo "Instance ${Instance_Name} is already exists, hence not creating"
-  exit
 fi
+
+IPADDRESS = $(aws ec2 describe-instances --filters Name=tag:Name,Values=frontend --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
+echo '{
+            "Comment": "CREATE/DELETE/UPSERT a record ",
+            "Changes": [{
+            "Action": "CREATE",
+                        "ResourceRecordSet": {
+                                    "Name": "DNSNAME",
+                                    "Type": "A",
+                                    "TTL": 300,
+                                 "ResourceRecords": [{ "Value": "IPADDRESS"}]
+}}]
+}' | sed -e "s/DNSNAME/$(Instance_Name)/" -e "s/IPADDRESS/${}"  >/tmp/record.json
