@@ -9,7 +9,7 @@ fi
 
 AMI_ID=$(aws ec2 describe-images  --filters "Name=name,Values=Centos-7-DevOps-Practice" --query 'Images[*].[ImageId]' --output text)
 
-if [ -z "${AMI_ID}" ];then
+if [ -z "${AMI_ID}" ]; then
   echo -e "\e[1;31munable to find image AMID\e[0m"
   exit
 else
@@ -19,7 +19,7 @@ fi
 
 Private_Ip=$(aws ec2 describe-instances --filters Name=tag:Name,Values=frontend --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
 
-if [ -z "${Private_Ip}"];then
+if [ -z "${Private_Ip}" ]; then
   SG_ID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=allow-all-ports --query "SecurityGroups[*].GroupId" --output text)
   if [-z "${SG_ID}"]; then
       echo"security group allow-all-ports is not exist"
