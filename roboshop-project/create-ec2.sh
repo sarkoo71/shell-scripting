@@ -30,7 +30,7 @@ else
   echo "Instance ${Instance_Name} is already exists, hence not creating"
 fi
 
-IPADDRESS = $(aws ec2 describe-instances --filters Name=tag:Name,Values=frontend --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
+IPADDRESS=$(aws ec2 describe-instances --filters Name=tag:Name,Values=frontend --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
 echo '{
             "Comment": "CREATE/DELETE/UPSERT a record ",
             "Changes": [{
@@ -41,4 +41,4 @@ echo '{
                                     "TTL": 300,
                                  "ResourceRecords": [{ "Value": "IPADDRESS"}]
 }}]
-}' | sed -e "s/DNSNAME/$(Instance_Name)/" -e "s/IPADDRESS/${IPADDRESS/}"  >/tmp/record.json
+}' | sed -e "s/DNSNAME/$(Instance_Name)/" -e "s/IPADDRESS/${IPADDRESS}/"  >/tmp/record.json
