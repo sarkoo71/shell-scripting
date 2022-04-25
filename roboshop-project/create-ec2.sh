@@ -17,7 +17,7 @@ else
 fi
 
 
-Private_Ip=$(aws ec2 describe-instances --filters Name=tag:Name,Values={Instance_Name} --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
+Private_Ip=$(aws ec2 describe-instances --filters "Name=tag:Name,Values={Instance_Name}" --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
 
 if [ -z "${Private_Ip}" ]; then
   SG_ID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=allow-all-ports --query "SecurityGroups[*].GroupId" --output text)
