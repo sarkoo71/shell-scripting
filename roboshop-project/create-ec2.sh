@@ -1,6 +1,8 @@
 #!/bin/bash
-LOG = /tmp/intance-create.log
+
+LOG=/tmp/intance-create.log
 rf -f $LOG
+
 Instance_Name=$1
 if [ -z "${Instance_Name}" ]; then
   echo -e "\e[1:33mInstance Name argument is needed\e[0m"
