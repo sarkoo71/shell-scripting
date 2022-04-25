@@ -1,4 +1,6 @@
 #!/bin/bash
+LOG = /tmp/intance-create.log
+rf -f $LOG
 Instance_Name=$1
 if [ -z "${Instance_Name}" ]; then
   echo -e "\e[1:33mInstance Name argument is needed\e[0m"
@@ -44,4 +46,4 @@ echo '{
 }' | sed -e "s/DNSNAME/${Instance_Name}/" -e "s/IPADDRESS/${IPADDRESS}/"  >/tmp/record.json
 
 ZONE_ID=$(aws route53 list-hosted-zones --query "HostedZones[*].{name:Name,ID:Id}" --output text | grep roboshop.internal  | awk '{print $1}' | awk -F / '{print $3}')
-aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch file:///tmp/record.json --output text
+aws route53 change-resource-record-sets --hosted-zone-id $ZONE_ID --change-batch file:///tmp/record.json --output text &>>$LOG
