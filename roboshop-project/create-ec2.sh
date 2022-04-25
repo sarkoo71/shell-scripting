@@ -38,7 +38,7 @@ IPADDRESS=$(aws ec2 describe-instances --filters Name=tag:Name,Values="${Instanc
 echo '{
             "Comment": "CREATE/DELETE/UPSERT a record ",
             "Changes": [{
-            "Action": "CREATE",
+            "Action": "UPSERT",
                         "ResourceRecordSet": {
                                     "Name": "DNSNAME",
                                     "Type": "A",
