@@ -29,7 +29,8 @@ if [ -z "${Private_Ip}" ]; then
       echo"security group allow-all-ports is not exist"
       exit
   fi
-  aws ec2 run-instances --image-id ${AMI_ID} --instance-type t3.micro --output text --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${Instance_Name}}]" "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=${Instance_Name}}]"  --instance-market-options "MarketType=spot,SpotOptions={InstanceInterruptionBehavior=stop, SpotInstanceType = persistent}" --security-group-ids "${SG_ID}"
+  aws ec2 run-instances --image-id ${AMI_ID} --instance-type t3.micro --output text --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${Instance_Name}}]" "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=${Instance_Name}}]"  --instance-market-options "MarketType=spot,SpotOptions={InstanceInterruptionBehavior=stop, SpotInstanceType = persistent}" --security-group-ids "${SG_ID}" &>>$LOG
+  echo -e "\e[1m Instance created \e[0m"
 else
   echo "Instance ${Instance_Name} is already exists, hence not creating"
 fi
