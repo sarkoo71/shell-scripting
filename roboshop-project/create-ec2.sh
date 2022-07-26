@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG=/tmp/intance-create.log
-rf -f $LOG
+rm -f $LOG
 
 Instance_Name=$1
 if [ -z "${Instance_Name}" ]; then
