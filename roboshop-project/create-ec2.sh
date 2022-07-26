@@ -24,11 +24,13 @@ fi
 Private_Ip=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${Instance_Name}" --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
 
 if [ -z "${Private_Ip}" ]; then
+  #Find security group
   SG_ID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=allow-all-ports --query "SecurityGroups[*].GroupId" --output text)
   if [ -z "${SG_ID}" ]; then
       echo"security group allow-all-ports is not exist"
       exit
   fi
+  #Creating Instance
   aws ec2 run-instances --image-id ${AMI_ID} --instance-type t3.micro --output text --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${Instance_Name}}]" "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=${Instance_Name}}]"  --instance-market-options "MarketType=spot,SpotOptions={InstanceInterruptionBehavior=stop, SpotInstanceType = persistent}" --security-group-ids "${SG_ID}" &>>$LOG
   echo -e "\e[1m Instance created \e[0m"
 else
