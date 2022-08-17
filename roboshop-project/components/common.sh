@@ -19,8 +19,7 @@ NODEJS(){
   STAT $?
 
   echo "Install NodeJS"
-  if
-  yum install nodejs -y&>>$LOG_FILE
+  yum install nodejs -y &>>$LOG_FILE
   STAT $?
 
   echo "Create app user"
