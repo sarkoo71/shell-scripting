@@ -42,4 +42,5 @@
 ## systemctl enable catalogue
 #
 #```
+source components/common.sh
 NODEJS catalogue
