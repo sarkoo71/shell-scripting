@@ -25,6 +25,10 @@ NODEJS(){
   STAT $?
 
   echo "Create app user"
+  id roboshop &>>$LOG_FILE
+  if [ $? -ne 0 ]; then
+      useradd roboshop &>>$LOG_FILE
+  fi
   useradd roboshop &>>$LOG_FILE
   STAT $?
 
