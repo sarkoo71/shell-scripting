@@ -29,7 +29,6 @@ NODEJS(){
   if [ $? -ne 0 ]; then
       useradd roboshop &>>$LOG_FILE
   fi
-  useradd roboshop &>>$LOG_FILE
   STAT $?
 
   echo "Download ${COMPONENT}   code"
