@@ -15,11 +15,11 @@ STAT(){
 NODEJS(){
   COMPONENT=$1
   echo "Setup NodeJS Repo"
-  curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash - &>>$LOG_FILE
+  curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash - &>>$LOG_FILE
   STAT $?
 
   echo "Install NodeJS"
-  yum install nodejs -y &>>$LOG_FILE
+  yum install nodejs gcc-c++ -y &>>$LOG_FILE
   STAT $?
 
   echo "Create app user"
