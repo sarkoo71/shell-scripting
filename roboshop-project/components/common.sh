@@ -15,13 +15,14 @@ STAT(){
 NODEJS(){
   COMPONENT=$1
   echo "Setup NodeJS Repo"
-  curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash - &>>$LOG_FILE
+  #curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash - &>>$LOG_FILE
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   STAT $?
 
   echo "Install NodeJS by NVM"
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm install 16
   STAT $?
 
   echo "Create app user"
