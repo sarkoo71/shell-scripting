@@ -60,7 +60,7 @@ NODEJS(){
   STAT $?
 
   echo "Updating ${COMPONENT} systemD file"
-  sed -i -e 's/MONGO_DNSNAME/mongod.rshope.internal/' /home/roboshop/${COMPONENT}/systemd.service &>>$LOG_FILE
+  sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/${COMPONENT}/systemd.service &>>$LOG_FILE
   STAT $?
 
   echo "Setup ${COMPONENT} Systemd File"
